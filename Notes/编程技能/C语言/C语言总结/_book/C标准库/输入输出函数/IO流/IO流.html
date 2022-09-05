@@ -1,0 +1,1797 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1. IO流 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../字符IO/字符IO.html" />
+    
+    
+    <link rel="prev" href="../错误报告/错误报告.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../../数据类型/数据类型.html">
+            
+                <a href="../../../数据类型/数据类型.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../../数据类型/基本数据类型/基本数据类型.html">
+            
+                <a href="../../../数据类型/基本数据类型/基本数据类型.html">
+            
+                    
+                    一. 基本数据类型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../../数据类型/基本数据类型/字符型/字符型.html">
+            
+                <a href="../../../数据类型/基本数据类型/字符型/字符型.html">
+            
+                    
+                    1. 字符型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../../数据类型/基本数据类型/整型/整型.html">
+            
+                <a href="../../../数据类型/基本数据类型/整型/整型.html">
+            
+                    
+                    2. 整型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../../../数据类型/基本数据类型/浮点型/浮点型.html">
+            
+                <a href="../../../数据类型/基本数据类型/浮点型/浮点型.html">
+            
+                    
+                    3. 浮点型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../../../数据类型/基本数据类型/指针/指针.html">
+            
+                <a href="../../../数据类型/基本数据类型/指针/指针.html">
+            
+                    
+                    4. 指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="../../../数据类型/基本数据类型/数组/数组.html">
+            
+                <a href="../../../数据类型/基本数据类型/数组/数组.html">
+            
+                    
+                    5. 数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" data-path="../../../数据类型/基本数据类型/字符串/字符串.html">
+            
+                <a href="../../../数据类型/基本数据类型/字符串/字符串.html">
+            
+                    
+                    6. 字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.7" data-path="../../../数据类型/基本数据类型/结构/结构.html">
+            
+                <a href="../../../数据类型/基本数据类型/结构/结构.html">
+            
+                    
+                    7. 结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.8" data-path="../../../数据类型/基本数据类型/联合/联合.html">
+            
+                <a href="../../../数据类型/基本数据类型/联合/联合.html">
+            
+                    
+                    8. 联合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.9" data-path="../../../数据类型/基本数据类型/枚举/枚举.html">
+            
+                <a href="../../../数据类型/基本数据类型/枚举/枚举.html">
+            
+                    
+                    9. 枚举
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../../数据类型/基本操作/基本操作.html">
+            
+                <a href="../../../数据类型/基本操作/基本操作.html">
+            
+                    
+                    二. 基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../../数据类型/变量的属性/变量的属性.html">
+            
+                <a href="../../../数据类型/变量的属性/变量的属性.html">
+            
+                    
+                    三. 变量的属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../../数据类型/类型操作符/类型操作符.html">
+            
+                <a href="../../../数据类型/类型操作符/类型操作符.html">
+            
+                    
+                    四. 类型操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../../表达式/表达式.html">
+            
+                <a href="../../../表达式/表达式.html">
+            
+                    
+                    表达式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../../表达式/布尔值/布尔值.html">
+            
+                <a href="../../../表达式/布尔值/布尔值.html">
+            
+                    
+                    一. 布尔值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../../表达式/左值和右值/左值和右值.html">
+            
+                <a href="../../../表达式/左值和右值/左值和右值.html">
+            
+                    
+                    二. 左值和右值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../../表达式/操作符/操作符.html">
+            
+                <a href="../../../表达式/操作符/操作符.html">
+            
+                    
+                    三. 操作符
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../../../表达式/操作符/算术操作符/算术操作符.html">
+            
+                <a href="../../../表达式/操作符/算术操作符/算术操作符.html">
+            
+                    
+                    1. 算术操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../../../表达式/操作符/移位操作符/移位操作符.html">
+            
+                <a href="../../../表达式/操作符/移位操作符/移位操作符.html">
+            
+                    
+                    2. 移位操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../../../表达式/操作符/位操作符/位操作符.html">
+            
+                <a href="../../../表达式/操作符/位操作符/位操作符.html">
+            
+                    
+                    3. 位操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="../../../表达式/操作符/赋值操作符/赋值操作符.html">
+            
+                <a href="../../../表达式/操作符/赋值操作符/赋值操作符.html">
+            
+                    
+                    4. 赋值操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.5" data-path="../../../表达式/操作符/单目操作符/单目操作符.html">
+            
+                <a href="../../../表达式/操作符/单目操作符/单目操作符.html">
+            
+                    
+                    5. 单目操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.6" data-path="../../../表达式/操作符/关系操作符/关系操作符.html">
+            
+                <a href="../../../表达式/操作符/关系操作符/关系操作符.html">
+            
+                    
+                    6. 关系操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.7" data-path="../../../表达式/操作符/逻辑操作符/逻辑操作符.html">
+            
+                <a href="../../../表达式/操作符/逻辑操作符/逻辑操作符.html">
+            
+                    
+                    7. 逻辑操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.8" data-path="../../../表达式/操作符/条件操作符/条件操作符.html">
+            
+                <a href="../../../表达式/操作符/条件操作符/条件操作符.html">
+            
+                    
+                    8. 条件操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.9" data-path="../../../表达式/操作符/逗号操作符/逗号操作符.html">
+            
+                <a href="../../../表达式/操作符/逗号操作符/逗号操作符.html">
+            
+                    
+                    9. 逗号操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.10" data-path="../../../表达式/操作符/成员访问操作符/成员访问操作符.html">
+            
+                <a href="../../../表达式/操作符/成员访问操作符/成员访问操作符.html">
+            
+                    
+                    10. 成员访问操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../../表达式/表达式求值/表达式求值.html">
+            
+                <a href="../../../表达式/表达式求值/表达式求值.html">
+            
+                    
+                    四. 表达式求值
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../../../表达式/表达式求值/隐式类型转换/隐式类型转换.html">
+            
+                <a href="../../../表达式/表达式求值/隐式类型转换/隐式类型转换.html">
+            
+                    
+                    1. 隐式类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../../../表达式/表达式求值/算术转换/算术转换.html">
+            
+                <a href="../../../表达式/表达式求值/算术转换/算术转换.html">
+            
+                    
+                    2. 算术转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="../../../表达式/表达式求值/操作符的属性/操作符的属性.html">
+            
+                <a href="../../../表达式/表达式求值/操作符的属性/操作符的属性.html">
+            
+                    
+                    3. 操作符的属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../../语句/语句.html">
+            
+                <a href="../../../语句/语句.html">
+            
+                    
+                    语句
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../../语句/代码块/代码块.html">
+            
+                <a href="../../../语句/代码块/代码块.html">
+            
+                    
+                    一. 代码块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../../语句/简单语句/简单语句.html">
+            
+                <a href="../../../语句/简单语句/简单语句.html">
+            
+                    
+                    二. 简单语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../../语句/循环语句/循环语句.html">
+            
+                <a href="../../../语句/循环语句/循环语句.html">
+            
+                    
+                    三. 循环语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../../语句/分支语句/分支语句.html">
+            
+                <a href="../../../语句/分支语句/分支语句.html">
+            
+                    
+                    四. 分支语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../../语句/跳转语句/跳转语句.html">
+            
+                <a href="../../../语句/跳转语句/跳转语句.html">
+            
+                    
+                    五. 跳转语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../../函数/函数.html">
+            
+                <a href="../../../函数/函数.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../../函数/函数定义/函数定义.html">
+            
+                <a href="../../../函数/函数定义/函数定义.html">
+            
+                    
+                    一. 函数定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../../函数/函数声明/函数声明.html">
+            
+                <a href="../../../函数/函数声明/函数声明.html">
+            
+                    
+                    二. 函数声明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../../函数/函数的参数/函数的参数.html">
+            
+                <a href="../../../函数/函数的参数/函数的参数.html">
+            
+                    
+                    三. 函数的参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../../函数/递归函数/递归函数.html">
+            
+                <a href="../../../函数/递归函数/递归函数.html">
+            
+                    
+                    四. 递归函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../../C预处理器/C预处理器.html">
+            
+                <a href="../../../C预处理器/C预处理器.html">
+            
+                    
+                    C预处理器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../../C预处理器/define/define.html">
+            
+                <a href="../../../C预处理器/define/define.html">
+            
+                    
+                    一. define
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../../../C预处理器/define/宏/宏.html">
+            
+                <a href="../../../C预处理器/define/宏/宏.html">
+            
+                    
+                    1. 宏
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../../../C预处理器/define/define替换/define替换.html">
+            
+                <a href="../../../C预处理器/define/define替换/define替换.html">
+            
+                    
+                    2. define替换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../../../C预处理器/define/宏与函数/宏与函数.html">
+            
+                <a href="../../../C预处理器/define/宏与函数/宏与函数.html">
+            
+                    
+                    3. 宏与函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="../../../C预处理器/define/带副作用的宏参数/带副作用的宏参数.html">
+            
+                <a href="../../../C预处理器/define/带副作用的宏参数/带副作用的宏参数.html">
+            
+                    
+                    4. 带副作用的宏参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.5" data-path="../../../C预处理器/define/命名约定/命名约定.html">
+            
+                <a href="../../../C预处理器/define/命名约定/命名约定.html">
+            
+                    
+                    5. 命名约定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.6" data-path="../../../C预处理器/define/undef/undef.html">
+            
+                <a href="../../../C预处理器/define/undef/undef.html">
+            
+                    
+                    6. undef
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.7" data-path="../../../C预处理器/define/命令行定义/命令行定义.html">
+            
+                <a href="../../../C预处理器/define/命令行定义/命令行定义.html">
+            
+                    
+                    7. 命令行定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../../C预处理器/条件编译/条件编译.html">
+            
+                <a href="../../../C预处理器/条件编译/条件编译.html">
+            
+                    
+                    二. 条件编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../../C预处理器/文件包含/文件包含.html">
+            
+                <a href="../../../C预处理器/文件包含/文件包含.html">
+            
+                    
+                    三. 文件包含
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../../C预处理器/其他指令/其他指令.html">
+            
+                <a href="../../../C预处理器/其他指令/其他指令.html">
+            
+                    
+                    四. 其他指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../C标准库.html">
+            
+                <a href="../../C标准库.html">
+            
+                    
+                    C标准库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../输入输出函数.html">
+            
+                <a href="../输入输出函数.html">
+            
+                    
+                    一. 输入输出函数
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../错误报告/错误报告.html">
+            
+                <a href="../错误报告/错误报告.html">
+            
+                    
+                    0. 错误报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.1.2" data-path="IO流.html">
+            
+                <a href="IO流.html">
+            
+                    
+                    1. IO流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.3" data-path="../字符IO/字符IO.html">
+            
+                <a href="../字符IO/字符IO.html">
+            
+                    
+                    2. 字符IO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4" data-path="../行IO/行IO.html">
+            
+                <a href="../行IO/行IO.html">
+            
+                    
+                    3. 行IO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.5" data-path="../二进制IO/二进制IO.html">
+            
+                <a href="../二进制IO/二进制IO.html">
+            
+                    
+                    4. 二进制IO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.6" data-path="../刷新和定位函数/刷新和定位函数.html">
+            
+                <a href="../刷新和定位函数/刷新和定位函数.html">
+            
+                    
+                    5. 刷新和定位函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.7" data-path="../改变缓冲方式/改变缓冲方式.html">
+            
+                <a href="../改变缓冲方式/改变缓冲方式.html">
+            
+                    
+                    6. 改变缓冲方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.8" data-path="../流错误函数/流错误函数.html">
+            
+                <a href="../流错误函数/流错误函数.html">
+            
+                    
+                    7. 流错误函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.9" data-path="../临时文件/临时文件.html">
+            
+                <a href="../临时文件/临时文件.html">
+            
+                    
+                    8. 临时文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.10" data-path="../文件操纵函数/文件操纵函数.html">
+            
+                <a href="../文件操纵函数/文件操纵函数.html">
+            
+                    
+                    9. 文件操纵函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../整型函数/整型函数.html">
+            
+                <a href="../../整型函数/整型函数.html">
+            
+                    
+                    二. 整型函数
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="../../整型函数/算数/算数.html">
+            
+                <a href="../../整型函数/算数/算数.html">
+            
+                    
+                    1. 算数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.2" data-path="../../整型函数/随机数/随机数.html">
+            
+                <a href="../../整型函数/随机数/随机数.html">
+            
+                    
+                    2. 随机数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.3" data-path="../../整型函数/字符串转换/字符串转换.html">
+            
+                <a href="../../整型函数/字符串转换/字符串转换.html">
+            
+                    
+                    3. 字符串转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../浮点型函数/浮点型函数.html">
+            
+                <a href="../../浮点型函数/浮点型函数.html">
+            
+                    
+                    三. 浮点型函数
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.3.1" data-path="../../浮点型函数/错误类型/错误类型.html">
+            
+                <a href="../../浮点型函数/错误类型/错误类型.html">
+            
+                    
+                    0. 错误类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.2" data-path="../../浮点型函数/三角函数/三角函数.html">
+            
+                <a href="../../浮点型函数/三角函数/三角函数.html">
+            
+                    
+                    1. 三角函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.3" data-path="../../浮点型函数/双曲函数/双曲函数.html">
+            
+                <a href="../../浮点型函数/双曲函数/双曲函数.html">
+            
+                    
+                    2. 双曲函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.4" data-path="../../浮点型函数/对数和指数函数/对数和指数函数.html">
+            
+                <a href="../../浮点型函数/对数和指数函数/对数和指数函数.html">
+            
+                    
+                    3. 对数和指数函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.5" data-path="../../浮点型函数/浮点表示形式/浮点表示形式.html">
+            
+                <a href="../../浮点型函数/浮点表示形式/浮点表示形式.html">
+            
+                    
+                    4. 浮点表示形式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.6" data-path="../../浮点型函数/幂/幂.html">
+            
+                <a href="../../浮点型函数/幂/幂.html">
+            
+                    
+                    5. 幂
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.7" data-path="../../浮点型函数/底数顶数绝对值和余数/底数顶数绝对值和余数.html">
+            
+                <a href="../../浮点型函数/底数顶数绝对值和余数/底数顶数绝对值和余数.html">
+            
+                    
+                    6. 底数、顶数、绝对值和余数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.8" data-path="../../浮点型函数/字符串转换/字符串转换.html">
+            
+                <a href="../../浮点型函数/字符串转换/字符串转换.html">
+            
+                    
+                    7. 字符串转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../日期和时间函数/日期和时间函数.html">
+            
+                <a href="../../日期和时间函数/日期和时间函数.html">
+            
+                    
+                    四. 日期和时间函数
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.4.1" data-path="../../日期和时间函数/处理器时间/处理器时间.html">
+            
+                <a href="../../日期和时间函数/处理器时间/处理器时间.html">
+            
+                    
+                    1. 处理器时间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.2" data-path="../../日期和时间函数/当天时间/当天时间.html">
+            
+                <a href="../../日期和时间函数/当天时间/当天时间.html">
+            
+                    
+                    2. 当天时间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.3" data-path="../../日期和时间函数/日期和时间的转换/日期和时间的转换.html">
+            
+                <a href="../../日期和时间函数/日期和时间的转换/日期和时间的转换.html">
+            
+                    
+                    3. 日期和时间的转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../../非本地跳转/非本地跳转.html">
+            
+                <a href="../../非本地跳转/非本地跳转.html">
+            
+                    
+                    五. 非本地跳转
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../../信号/信号.html">
+            
+                <a href="../../信号/信号.html">
+            
+                    
+                    六. 信号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../../打印可变参数列表/打印可变参数列表.html">
+            
+                <a href="../../打印可变参数列表/打印可变参数列表.html">
+            
+                    
+                    七. 打印可变参数列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../../执行环境/执行环境.html">
+            
+                <a href="../../执行环境/执行环境.html">
+            
+                    
+                    八. 执行环境
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.8.1" data-path="../../执行环境/终止执行/终止执行.html">
+            
+                <a href="../../执行环境/终止执行/终止执行.html">
+            
+                    
+                    1. 终止执行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8.2" data-path="../../执行环境/断言/断言.html">
+            
+                <a href="../../执行环境/断言/断言.html">
+            
+                    
+                    2. 断言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8.3" data-path="../../执行环境/环境/环境.html">
+            
+                <a href="../../执行环境/环境/环境.html">
+            
+                    
+                    3. 环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8.4" data-path="../../执行环境/执行系统命令/执行系统命令.html">
+            
+                <a href="../../执行环境/执行系统命令/执行系统命令.html">
+            
+                    
+                    4. 执行系统命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8.5" data-path="../../执行环境/排序和查找/排序和查找.html">
+            
+                <a href="../../执行环境/排序和查找/排序和查找.html">
+            
+                    
+                    5. 排序和查找
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../../locale/locale.html">
+            
+                <a href="../../locale/locale.html">
+            
+                    
+                    九. locale
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.9.1" data-path="../../locale/数值和货币格式/数值和货币格式.html">
+            
+                <a href="../../locale/数值和货币格式/数值和货币格式.html">
+            
+                    
+                    1. 数值和货币格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9.2" data-path="../../locale/字符串和locale/字符串和locale.html">
+            
+                <a href="../../locale/字符串和locale/字符串和locale.html">
+            
+                    
+                    2. 字符串和locale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9.3" data-path="../../locale/改变locale的效果/改变locale的效果.html">
+            
+                <a href="../../locale/改变locale的效果/改变locale的效果.html">
+            
+                    
+                    3. 改变locale的效果
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../../动态内存分配/动态内存分配.html">
+            
+                <a href="../../../动态内存分配/动态内存分配.html">
+            
+                    
+                    动态内存分配
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../../动态内存分配/内存分配函数/内存分配函数.html">
+            
+                <a href="../../../动态内存分配/内存分配函数/内存分配函数.html">
+            
+                    
+                    一. 内存分配函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../../动态内存分配/使用动态分配的内存/使用动态分配的内存.html">
+            
+                <a href="../../../动态内存分配/使用动态分配的内存/使用动态分配的内存.html">
+            
+                    
+                    二. 使用动态分配的内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../../动态内存分配/常见的动态内存错误/常见的动态内存错误.html">
+            
+                <a href="../../../动态内存分配/常见的动态内存错误/常见的动态内存错误.html">
+            
+                    
+                    三. 常见的动态内存错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >1. IO流</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4E00;-&#x603B;&#x89C8;">&#x4E00;. &#x603B;&#x89C8;</h1>
+<h2 id="1-&#x64CD;&#x7EB5;&#x6D41;io&#xFF1A;">1. &#x64CD;&#x7EB5;&#x6D41;I/O&#xFF1A;</h2>
+<ol>
+<li>&#x7A0B;&#x5E8F;&#x4E3A;&#x5FC5;&#x987B;&#x540C;&#x65F6;&#x5904;&#x4E8E;&#x6D3B;&#x52A8;&#x72B6;&#x6001;&#x7684;&#x6BCF;&#x4E2A;&#x6587;&#x4EF6;&#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x6307;&#x9488;&#x53D8;&#x91CF;&#xFF0C;&#x5176;&#x7C7B;&#x578B;&#x4E3A;<code>FILE*</code>&#x3002;&#x8FD9;&#x4E2A;&#x6307;&#x9488;&#x6307;&#x5411;&#x8FD9;&#x4E2A;<code>FILE</code>&#x7ED3;&#x6784;&#xFF0C;&#x5F53;&#x5B83;&#x5904;&#x4E8E;&#x6D3B;&#x52A8;&#x72B6;&#x6001;&#x65F6;&#x7531;&#x6D41;&#x4F7F;&#x7528;&#x3002;</li>
+<li>&#x6D41;&#x901A;&#x8FC7;&#x8C03;&#x7528;<code>fopen</code>&#x51FD;&#x6570;&#x6253;&#x5F00;&#x3002;&#x4E3A;&#x4E86;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x6D41;&#xFF0C;&#x5FC5;&#x987B;&#x6307;&#x5B9A;&#x9700;&#x8981;&#x8BBF;&#x95EE;&#x7684;&#x6587;&#x4EF6;&#x6216;&#x8BBE;&#x5907;&#x4EE5;&#x53CA;&#x5B83;&#x4EEC;&#x7684;&#x8BBF;&#x95EE;&#x65B9;&#x5F0F;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;&#x8BFB;&#x3001;&#x5199;&#x6216;&#x8005;&#x65E2;&#x8BFB;&#x53C8;&#x5199;&#xFF09;&#x3002;<code>fopen</code>&#x5411;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x9A8C;&#x8BC1;&#x6587;&#x4EF6;&#x6216;&#x8BBE;&#x5907;&#x786E;&#x5B9E;&#x5B58;&#x5728;&#xFF08;&#x5728;&#x6709;&#x4E9B;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x8FD8;&#x4F1A;&#x9A8C;&#x8BC1;&#x662F;&#x5426;&#x5141;&#x8BB8;&#x6267;&#x884C;&#x6240;&#x6307;&#x5B9A;&#x7684;&#x8BBF;&#x95EE;&#x65B9;&#x5F0F;&#xFF09;&#x5E76;&#x521D;&#x59CB;&#x5316;<code>FILE</code>&#x7ED3;&#x6784;</li>
+<li>&#x6839;&#x636E;&#x9700;&#x8981;&#x5BF9;&#x8BE5;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x8BFB;&#x53D6;&#x6216;&#x5199;&#x5165;&#x3002;</li>
+<li><p>&#x8C03;&#x7528;<code>fclose</code>&#x51FD;&#x6570;&#x5173;&#x95ED;&#x6D41;&#x3002;&#x5173;&#x95ED;&#x4E00;&#x4E2A;&#x6D41;&#x53EF;&#x4EE5;&#x9632;&#x6B62;&#x4E0E;&#x5B83;&#x76F8;&#x5173;&#x8054;&#x7684;&#x6587;&#x4EF6;&#x88AB;&#x518D;&#x6B21;&#x8BBF;&#x95EE;&#xFF0C;&#x4FDD;&#x8BC1;&#x4EFB;&#x4F55;&#x5B58;&#x50A8;&#x4E8E;&#x7F13;&#x51B2;&#x533A;&#x7684;&#x6570;&#x636E;&#x88AB;&#x6B63;&#x786E;&#x5730;&#x5199;&#x5230;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x5E76;&#x4E14;&#x91CA;&#x653E;<code>FILE</code>&#x7ED3;&#x6784;&#xFF0C;&#x4EE5;&#x4F7F;&#x5B83;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x53E6;&#x5916;&#x7684;&#x6587;&#x4EF6;&#x3002;</p>
+</li>
+<li><p>&#x6807;&#x51C6;&#x6D41;&#x7684;I/O&#x66F4;&#x4E3A;&#x7B80;&#x5355;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#x5E76;&#x4E0D;&#x9700;&#x8981;&#x6253;&#x5F00;&#x6216;&#x5173;&#x95ED;&#x3002;</p>
+</li>
+</ol>
+<h2 id="2-&#x4E0D;&#x540C;io&#x5F62;&#x5F0F;&#x7684;&#x51FD;&#x6570;&#x6216;&#x51FD;&#x6570;&#x5BB6;&#x65CF;">2. &#x4E0D;&#x540C;I/O&#x5F62;&#x5F0F;&#x7684;&#x51FD;&#x6570;&#x6216;&#x51FD;&#x6570;&#x5BB6;&#x65CF;</h2>
+<ul>
+<li>&#x51FD;&#x6570;&#x6216;&#x51FD;&#x6570;&#x5BB6;&#x65CF;&#x540D;&#xFF08;&#x51FD;&#x6570;&#x5BB6;&#x65CF;&#x540D;&#x4E3A;&#x659C;&#x4F53;&#xFF0C;&#x51FD;&#x6570;&#x540D;&#x4E3A;&#x9ED1;&#x4F53;&#xFF09;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x6570;&#x636E;&#x7C7B;&#x578B;</th>
+<th style="text-align:center">&#x8F93;&#x5165;</th>
+<th style="text-align:center">&#x8F93;&#x51FA;</th>
+<th style="text-align:center">&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">&#x5B57;&#x7B26;</td>
+<td style="text-align:center"><em>getchar</em></td>
+<td style="text-align:center"><em>putchar</em></td>
+<td style="text-align:center">&#x8BFB;&#x53D6;/&#x5199;&#x5165;&#x5355;&#x4E2A;&#x5B57;&#x7B26;</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x6587;&#x672C;&#x884C;</td>
+<td style="text-align:center"><em>gets</em>&#x3001;<em>scanf</em></td>
+<td style="text-align:center"><em>puts</em>&#x3001;<em>printf</em></td>
+<td style="text-align:center">&#x6587;&#x672C;&#x884C;&#x672A;&#x683C;&#x5F0F;&#x5316;&#x7684;&#x8F93;&#x5165;/&#x8F93;&#x51FA;&#x3001;&#x683C;&#x5F0F;&#x5316;&#x7684;&#x8F93;&#x5165;/&#x8F93;&#x51FA;</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;</td>
+<td style="text-align:center"><strong>fread</strong></td>
+<td style="text-align:center"><strong>fwrite</strong></td>
+<td style="text-align:center">&#x8BFB;&#x53D6;/&#x5199;&#x5165;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x5177;&#x4F53;&#x7684;&#x51FD;&#x6570;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x5BB6;&#x65CF;&#x540D;</th>
+<th style="text-align:center">&#x76EE;&#x7684;</th>
+<th style="text-align:center">&#x53EF;&#x7528;&#x4E8E;&#x6240;&#x6709;&#x7684;&#x6D41;</th>
+<th style="text-align:center">&#x53EA;&#x7528;&#x4E8E;<code>stdin</code>&#x548C;<code>stdout</code></th>
+<th style="text-align:center">&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x5B57;&#x7B26;&#x4E32;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>getchar</em></td>
+<td style="text-align:center">&#x5B57;&#x7B26;&#x8F93;&#x5165;</td>
+<td style="text-align:center"><strong>fgetc</strong>&#x3001;<strong>getc</strong></td>
+<td style="text-align:center"><strong>getchar</strong></td>
+<td style="text-align:center">&#x2460;</td>
+</tr>
+<tr>
+<td style="text-align:center"><em>putchar</em></td>
+<td style="text-align:center">&#x5B57;&#x7B26;&#x8F93;&#x51FA;</td>
+<td style="text-align:center"><strong>fputc</strong>&#x3001;<strong>putc</strong></td>
+<td style="text-align:center"><strong>putchar</strong></td>
+<td style="text-align:center">&#x2460;</td>
+</tr>
+<tr>
+<td style="text-align:center"><em>gets</em></td>
+<td style="text-align:center">&#x6587;&#x672C;&#x884C;&#x8F93;&#x5165;</td>
+<td style="text-align:center"><strong>fgets</strong></td>
+<td style="text-align:center"><strong>gets</strong></td>
+<td style="text-align:center">&#x2461;</td>
+</tr>
+<tr>
+<td style="text-align:center"><em>puts</em></td>
+<td style="text-align:center">&#x6587;&#x672C;&#x884C;&#x8F93;&#x51FA;</td>
+<td style="text-align:center"><strong>fputs</strong></td>
+<td style="text-align:center"><strong>puts</strong></td>
+<td style="text-align:center">&#x2461;</td>
+</tr>
+<tr>
+<td style="text-align:center"><em>scanf</em></td>
+<td style="text-align:center">&#x683C;&#x5F0F;&#x5316;&#x8F93;&#x5165;</td>
+<td style="text-align:center"><strong>fscanf</strong></td>
+<td style="text-align:center"><strong>scanf</strong></td>
+<td style="text-align:center"><strong>sscanf</strong></td>
+</tr>
+<tr>
+<td style="text-align:center"><em>printf</em></td>
+<td style="text-align:center">&#x683C;&#x5F0F;&#x5316;&#x8F93;&#x51FA;</td>
+<td style="text-align:center"><strong>fprintf</strong></td>
+<td style="text-align:center"><strong>printf</strong></td>
+<td style="text-align:center"><strong>sprintf</strong></td>
+</tr>
+</tbody>
+</table>
+<p>&#x2460;&#xFF1A;&#x5BF9;&#x6307;&#x9488;&#x4F7F;&#x7528;&#x4E0B;&#x6807;&#x5F15;&#x7528;&#x6216;&#x95F4;&#x63A5;&#x8BBF;&#x95EE;&#x64CD;&#x4F5C;&#x4ECE;&#x5185;&#x5B58;&#x83B7;&#x5F97;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#xFF08;&#x6216;&#x5411;&#x5185;&#x5B58;&#x5199;&#x5165;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#xFF09;
+&#x2461;&#xFF1A;&#x4F7F;&#x7528;<code>strcpy</code>&#x51FD;&#x6570;&#x4ECE;&#x5185;&#x5B58;&#x8BFB;&#x53D6;&#x6587;&#x672C;&#x884C;&#xFF08;&#x6216;&#x5411;&#x5185;&#x5B58;&#x5199;&#x5165;&#x6587;&#x672C;&#x884C;&#xFF09;</p>
+<h1 id="&#x4E8C;-&#x6253;&#x5F00;&#x6D41;">&#x4E8C;. &#x6253;&#x5F00;&#x6D41;</h1>
+<h2 id="1-fopen">1. fopen</h2>
+<p><code>fopen</code>&#x51FD;&#x6570;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x7279;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x628A;&#x4E00;&#x4E2A;&#x6D41;&#x548C;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x76F8;&#x5173;&#x8054;&#x3002;&#x5B83;&#x7684;&#x539F;&#x578B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-function">FILE *<span class="hljs-title">fopen</span><span class="hljs-params">(<span class="hljs-keyword">char</span> <span class="hljs-keyword">const</span> *name, <span class="hljs-keyword">char</span> <span class="hljs-keyword">const</span> *mode)</span></span>;
+</code></pre>
+<ul>
+<li><p>&#x53C2;&#x6570;&#xFF1A;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x90FD;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x3002;<code>name</code>&#x662F;&#x5E0C;&#x671B;&#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6;&#x6216;&#x8BBE;&#x5907;&#x7684;&#x540D;&#x5B57;&#x3002;&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x540D;&#x7684;&#x89C4;&#x5219;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x7CFB;&#x7EDF;&#x4E2D;&#x53EF;&#x80FD;&#x5404;&#x4E0D;&#x76F8;&#x540C;&#xFF0C;&#x6240;&#x4EE5;<code>fopen</code>&#x628A;&#x6587;&#x4EF6;&#x540D;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x800C;&#x4E0D;&#x662F;&#x4F5C;&#x4E3A;&#x8DEF;&#x5F84;&#x540D;&#x3001;&#x9A71;&#x52A8;&#x5668;&#x5B57;&#x6BCD;&#x3001;&#x6587;&#x4EF6;&#x6269;&#x5C55;&#x540D;&#x7B49;&#x5E76;&#x51C6;&#x5907;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x3002;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x6307;&#x5B9A;&#x8981;&#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6;&#x2014;&#x2014;FILE*&#x53D8;&#x91CF;&#x7684;&#x540D;&#x5B57;&#x4F9B;&#x7A0B;&#x5E8F;&#x7528;&#x6765;&#x4FDD;&#x5B58;<code>fopen</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x3002;&#x5B83;&#x5E76;&#x4E0D;&#x5F71;&#x54CD;&#x54EA;&#x4E2A;&#x6587;&#x4EF6;&#x88AB;&#x6253;&#x5F00;&#x3002;<code>mode</code>&#x53C2;&#x6570;&#x63D0;&#x793A;&#x6D41;&#x662F;&#x7528;&#x4E8E;&#x53EA;&#x8BFB;&#x3001;&#x53EA;&#x5199;&#x8FD8;&#x662F;&#x65E2;&#x8BFB;&#x53C8;&#x5199;&#xFF0C;&#x4EE5;&#x53CA;&#x5B83;&#x662F;&#x6587;&#x672C;&#x6D41;&#x8FD8;&#x662F;&#x4E8C;&#x8FDB;&#x5236;&#x6D41;&#x3002;&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x4E9B;&#x5E38;&#x7528;&#x7684;&#x6A21;&#x5F0F;&#xFF1A;</p>
+<p>  ||&#x8BFB;&#x53D6;|&#x5199;&#x5165;|&#x6DFB;&#x52A0;|
+  |:-:|:-:|:-:|:-:|
+  |&#x6587;&#x672C;|<code>&quot;r&quot;</code>|<code>&quot;w&quot;</code>|<code>&quot;a&quot;</code>|
+  |&#x4E8C;&#x8FDB;&#x5236;|<code>&quot;rb&quot;</code>|<code>&quot;wb&quot;</code>|<code>&quot;ab&quot;</code>|</p>
+<ul>
+<li>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6;&#x662F;&#x7528;&#x4E8E;&#x8BFB;&#x53D6;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x5FC5;&#x987B;&#x539F;&#x5148;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;</li>
+<li>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6;&#x4F7F;&#x7528;&#x4E8E;&#x5199;&#x5165;&#xFF0C;&#x5982;&#x679C;&#x5B83;&#x539F;&#x5148;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x539F;&#x6765;&#x7684;&#x5185;&#x5BB9;&#x5C31;&#x4F1A;&#x88AB;&#x5220;&#x9664;&#x3002;&#x5982;&#x679C;&#x5B83;&#x539F;&#x5148;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x5C06;&#x88AB;&#x521B;&#x5EFA;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x6253;&#x5F00;&#x7684;&#x7528;&#x4E8E;&#x6DFB;&#x52A0;&#x7684;&#x6587;&#x4EF6;&#x539F;&#x5148;&#x5E76;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x5C06;&#x88AB;&#x521B;&#x5EFA;&#x3002;&#x5982;&#x679C;&#x4ED6;&#x539F;&#x5148;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x539F;&#x5148;&#x7684;&#x5185;&#x5BB9;&#x5E76;&#x4E0D;&#x4F1A;&#x88AB;&#x5220;&#x9664;&#x3002;</li>
+<li>&#x65E0;&#x8BBA;&#x54EA;&#x4E00;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x6570;&#x636E;&#x53EA;&#x80FD;&#x4ECE;&#x6587;&#x4EF6;&#x7684;&#x5C3E;&#x90E8;&#x5199;&#x5165;&#x3002;</li>
+<li>&#x5982;&#x679C;<code>mode</code>&#x4E3A;<code>&quot;a&quot;</code>&#x6216;<code>&quot;ab&quot;</code>&#x8868;&#x793A;&#x6253;&#x5F00;&#x8BE5;&#x6587;&#x4EF6;&#x7528;&#x4E8E;&#x66F4;&#x65B0;&#xFF0C;&#x5E76;&#x4E14;&#x6D41;&#x65E2;&#x5141;&#x8BB8;&#x8BFB;&#x4E5F;&#x5141;&#x8BB8;&#x5199;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x5DF2;&#x7ECF;&#x4ECE;&#x8BE5;&#x6587;&#x4EF6;&#x8BFB;&#x5165;&#x4E86;&#x4E00;&#x4E9B;&#x6570;&#x636E;&#xFF0C;&#x90A3;&#x4E48;&#x5728;&#x5F00;&#x59CB;&#x5411;&#x5B83;&#x5199;&#x5165;&#x6570;&#x636E;&#x4E4B;&#x524D;&#xFF0C;&#x5FC5;&#x987B;&#x8C03;&#x7528;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5B9A;&#x4F4D;&#x51FD;&#x6570;&#xFF08;<code>fseek</code>&#x3001;<code>fsetpos</code>&#x3001;<code>rewind</code>&#xFF09;&#x3002;&#x5728;&#x5411;&#x6587;&#x4EF6;&#x5199;&#x5165;&#x4E00;&#x4E9B;&#x6570;&#x636E;&#x4E4B;&#x540E;&#xFF0C;&#x5982;&#x679C;&#x53C8;&#x60F3;&#x4ECE;&#x8BE5;&#x6587;&#x4EF6;&#x8BFB;&#x53D6;&#x4E00;&#x4E9B;&#x6570;&#x636E;&#xFF0C;&#x5219;&#x9996;&#x5148;&#x5FC5;&#x987B;&#x8C03;&#x7528;<code>fflush</code>&#x51FD;&#x6570;&#x6216;&#x8005;&#x6587;&#x4EF6;&#x5B9A;&#x4F4D;&#x51FD;&#x6570;&#x4E4B;&#x4E00;</li>
+</ul>
+</li>
+<li>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x5982;&#x679C;<code>fopen</code>&#x51FD;&#x6570;&#x6267;&#x884C;&#x6210;&#x529F;&#xFF0C;&#x5B83;&#x5C06;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6307;&#x5411;<code>FILE</code>&#x7ED3;&#x6784;&#x7684;&#x6307;&#x9488;&#xFF0C;&#x8BE5;&#x7ED3;&#x6784;&#x4EE3;&#x8868;&#x8FD9;&#x4E2A;&#x65B0;&#x521B;&#x5EFA;&#x7684;&#x6D41;&#x3002;&#x5982;&#x679C;&#x51FD;&#x6570;&#x6267;&#x884C;&#x5931;&#x8D25;&#xFF0C;&#x5B83;&#x5C31;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;NULL&#x6307;&#x9488;&#xFF0C;<code>errno</code>&#x4F1A;&#x63D0;&#x793A;&#x95EE;&#x9898;&#x7684;&#x6027;&#x8D28;<ul>
+<li><strong>&#x6CE8;&#x610F;</strong>&#xFF1A;&#x5E94;&#x8BE5;&#x59CB;&#x7EC8;&#x68C0;&#x67E5;<code>fopen</code>&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;<h2 id="2-freopen">2. freopen</h2>
+<code>freopen</code>&#x51FD;&#x6570;&#x7528;&#x4E8E;&#x6253;&#x5F00;&#xFF08;&#x6216;&#x91CD;&#x65B0;&#x6253;&#x5F00;&#xFF09;&#x4E00;&#x4E2A;&#x7279;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x6D41;&#x3002;&#x5B83;&#x7684;&#x539F;&#x578B;&#x5982;&#x4E0B;&#xFF1A;<pre><code class="lang-c"><span class="hljs-function">FILE *<span class="hljs-title">freopen</span><span class="hljs-params">(<span class="hljs-keyword">char</span> <span class="hljs-keyword">const</span> *filename, <span class="hljs-keyword">char</span> <span class="hljs-keyword">const</span> *mode, FILE *stream)</span></span>;
+</code></pre>
+</li>
+</ul>
+</li>
+<li>&#x53C2;&#x6570;&#xFF1A;&#x6700;&#x540E;1&#x4E2A;&#x53C2;&#x6570;&#x5C31;&#x662F;&#x9700;&#x8981;&#x6253;&#x5F00;&#x7684;&#x6D41;&#x3002;&#x5B83;&#x53EF;&#x80FD;&#x662F;&#x4E00;&#x4E2A;&#x5148;&#x524D;&#x4ECE;<code>fopen</code>&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7684;&#x6D41;&#xFF0C;&#x4E5F;&#x53EF;&#x80FD;&#x662F;&#x6807;&#x51C6;&#x6D41;</li>
+<li>&#x64CD;&#x4F5C;&#xFF1A;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x9996;&#x5148;&#x8BD5;&#x56FE;&#x5173;&#x95ED;&#x8FD9;&#x4E2A;&#x6D41;&#xFF0C;&#x7136;&#x540E;&#x7528;&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x548C;&#x6A21;&#x5F0F;&#x91CD;&#x65B0;&#x6253;&#x5F00;&#x8FD9;&#x4E2A;&#x6D41;&#x3002;</li>
+<li>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x5982;&#x679C;&#x6253;&#x5F00;&#x5931;&#x8D25;&#xFF0C;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;NULL&#x503C;&#x3002;&#x5982;&#x679C;&#x6253;&#x5F00;&#x6210;&#x529F;&#xFF0C;&#x51FD;&#x6570;&#x5C31;&#x8FD4;&#x56DE;&#x5B83;&#x7684;&#x7B2C;3&#x4E2A;&#x53C2;&#x6570;&#x503C;</li>
+</ul>
+<h1 id="&#x4E09;-&#x5173;&#x95ED;&#x6D41;">&#x4E09;. &#x5173;&#x95ED;&#x6D41;</h1>
+<p>&#x6D41;&#x901A;&#x8FC7;&#x51FD;&#x6570;<code>fclose</code>&#x5173;&#x95ED;&#xFF0C;&#x5B83;&#x7684;&#x539F;&#x578B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">fclose</span><span class="hljs-params">(FILE *f)</span></span>;
+</code></pre>
+<ul>
+<li>&#x53C2;&#x6570;&#xFF1A;&#x9700;&#x8981;&#x5173;&#x95ED;&#x7684;&#x6D41;</li>
+<li>&#x64CD;&#x4F5C;&#xFF1A;&#x5173;&#x95ED;&#x4E00;&#x4E2A;&#x6D41;&#x3002;&#x5BF9;&#x4E8E;&#x8F93;&#x51FA;&#x6D41;&#xFF0C;<code>fclose</code>&#x51FD;&#x6570;&#x5728;&#x6587;&#x4EF6;&#x5173;&#x95ED;&#x4E4B;&#x524D;&#x5237;&#x65B0;&#x7F13;&#x51B2;&#x533A;</li>
+<li>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x5982;&#x679C;&#x5B83;&#x6267;&#x884C;&#x6210;&#x529F;&#xFF0C;<code>fclose</code>&#x8FD4;&#x56DE;&#x96F6;&#x503C;&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;EOF</li>
+<li><strong>&#x6CE8;&#x610F;</strong>&#xFF1A;&#x5982;&#x679C;&#x5173;&#x95ED;&#x6D41;&#x64CD;&#x4F5C;&#x6210;&#x529F;&#x548C;&#x64CD;&#x4F5C;&#x5931;&#x8D25;&#x4E4B;&#x540E;&#x9762;&#x4E34;&#x7740;&#x4E0D;&#x540C;&#x7684;&#x9009;&#x62E9;&#xFF0C;&#x90A3;&#x5C31;&#x5E94;&#x8BE5;&#x8FDB;&#x884C;&#x9519;&#x8BEF;&#x68C0;&#x67E5;</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../错误报告/错误报告.html" class="navigation navigation-prev " aria-label="Previous page: 0. 错误报告">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../字符IO/字符IO.html" class="navigation navigation-next " aria-label="Next page: 2. 字符IO">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1. IO流","level":"1.7.1.2","depth":3,"next":{"title":"2. 字符IO","level":"1.7.1.3","depth":3,"path":"C标准库/输入输出函数/字符IO/字符IO.md","ref":"C标准库/输入输出函数/字符IO/字符IO.md","articles":[]},"previous":{"title":"0. 错误报告","level":"1.7.1.1","depth":3,"path":"C标准库/输入输出函数/错误报告/错误报告.md","ref":"C标准库/输入输出函数/错误报告/错误报告.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-small"],"pluginsConfig":{"expandable-chapters-small":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"C标准库/输入输出函数/IO流/IO流.md","mtime":"2022-09-04T12:48:16.145Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-05T13:25:48.349Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
