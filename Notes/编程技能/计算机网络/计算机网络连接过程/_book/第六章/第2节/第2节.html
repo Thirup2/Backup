@@ -1,0 +1,717 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2. 服务器的连接操作 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../第3节/第3节.html" />
+    
+    
+    <link rel="prev" href="../第1节/第1节.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../第一章/第一章.html">
+            
+                <a href="../../第一章/第一章.html">
+            
+                    
+                    一. Web浏览器生成请求信息
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../第一章/第1节/第1节.html">
+            
+                <a href="../../第一章/第1节/第1节.html">
+            
+                    
+                    1. 浏览器解析网址
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../第一章/第2节/第2节.html">
+            
+                <a href="../../第一章/第2节/第2节.html">
+            
+                    
+                    2. 向DNS服务器查询IP地址
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../第一章/第3节/第3节.html">
+            
+                <a href="../../第一章/第3节/第3节.html">
+            
+                    
+                    3. 生成请求信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../第一章/第4节/第4节.html">
+            
+                <a href="../../第一章/第4节/第4节.html">
+            
+                    
+                    4. 委托协议栈发送信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../第二章/第二章.html">
+            
+                <a href="../../第二章/第二章.html">
+            
+                    
+                    二. 协议栈与网卡的作用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../第二章/第1节/第1节.html">
+            
+                <a href="../../第二章/第1节/第1节.html">
+            
+                    
+                    1. 创建套接字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../第二章/第2节/第2节.html">
+            
+                <a href="../../第二章/第2节/第2节.html">
+            
+                    
+                    2. 连接服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../第二章/第3节/第3节.html">
+            
+                <a href="../../第二章/第3节/第3节.html">
+            
+                    
+                    2.5 IP与以太网的包收发过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../第二章/第4节/第4节.html">
+            
+                <a href="../../第二章/第4节/第4节.html">
+            
+                    
+                    3. 收发数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../第二章/第5节/第5节.html">
+            
+                <a href="../../第二章/第5节/第5节.html">
+            
+                    
+                    4. 从服务器断开并删除套接字
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../第三章/第三章.html">
+            
+                <a href="../../第三章/第三章.html">
+            
+                    
+                    三. 从网线到网络设备
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../第三章/第1节/第1节.html">
+            
+                <a href="../../第三章/第1节/第1节.html">
+            
+                    
+                    1. 网线
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../第三章/第2节/第2节.html">
+            
+                <a href="../../第三章/第2节/第2节.html">
+            
+                    
+                    2. 集线器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../第三章/第3节/第3节.html">
+            
+                <a href="../../第三章/第3节/第3节.html">
+            
+                    
+                    3. 交换机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../第三章/第4节/第4节.html">
+            
+                <a href="../../第三章/第4节/第4节.html">
+            
+                    
+                    4. 路由器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../第三章/第5节/第5节.html">
+            
+                <a href="../../第三章/第5节/第5节.html">
+            
+                    
+                    5. 路由器的附加功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../../第三章/第6节/第6节.html">
+            
+                <a href="../../第三章/第6节/第6节.html">
+            
+                    
+                    6. 网线及设备的传输过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../第四章/第四章.html">
+            
+                <a href="../../第四章/第四章.html">
+            
+                    
+                    四. 接入网、网络运营商
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../第四章/第1节/第1节.html">
+            
+                <a href="../../第四章/第1节/第1节.html">
+            
+                    
+                    1. 接入网方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../第四章/第2节/第2节.html">
+            
+                <a href="../../第四章/第2节/第2节.html">
+            
+                    
+                    2. PPP和隧道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../第四章/第3节/第3节.html">
+            
+                <a href="../../第四章/第3节/第3节.html">
+            
+                    
+                    3. 接入网的整体工作过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../第四章/第4节/第4节.html">
+            
+                <a href="../../第四章/第4节/第4节.html">
+            
+                    
+                    4. 网络运营商之间的传输
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../第五章/第五章.html">
+            
+                <a href="../../第五章/第五章.html">
+            
+                    
+                    五. 服务器端的局域网
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../第五章/第1节/第1节.html">
+            
+                <a href="../../第五章/第1节/第1节.html">
+            
+                    
+                    1. Web服务器的部署地点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../第五章/第2节/第2节.html">
+            
+                <a href="../../第五章/第2节/第2节.html">
+            
+                    
+                    2. 防火墙的结构及原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../第五章/第3节/第3节.html">
+            
+                <a href="../../第五章/第3节/第3节.html">
+            
+                    
+                    3. 负载分担
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../第六章.html">
+            
+                <a href="../第六章.html">
+            
+                    
+                    六. 服务器的工作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../第1节/第1节.html">
+            
+                <a href="../第1节/第1节.html">
+            
+                    
+                    1. 服务器结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.2" data-path="第2节.html">
+            
+                <a href="第2节.html">
+            
+                    
+                    2. 服务器的连接操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../第3节/第3节.html">
+            
+                <a href="../第3节/第3节.html">
+            
+                    
+                    3. 服务器的接收操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../第4节/第4节.html">
+            
+                <a href="../第4节/第4节.html">
+            
+                    
+                    4. 服务器程序解释请求并做出响应
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../第5节/第5节.html">
+            
+                <a href="../第5节/第5节.html">
+            
+                    
+                    5. 浏览器接收响应消息并显示内容
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >2. 服务器的连接操作</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <ol>
+<li>&#x7F51;&#x5361;&#x5C06;&#x63A5;&#x6536;&#x5230;&#x7684;&#x4FE1;&#x53F7;&#x8F6C;&#x6362;&#x6210;&#x6570;&#x5B57;&#x4FE1;&#x606F;
+ &#x6570;&#x636E;&#xFF1A;&#x62A5;&#x5934;/&#x8D77;&#x59CB;&#x5E27;&#x5206;&#x754C;&#x7B26;+MAC&#x5934;&#x90E8;+IP&#x5934;&#x90E8;+TCP&#x5934;&#x90E8;+&#x6570;&#x636E;+FCS</li>
+<li>&#x7F51;&#x5361;&#x6821;&#x9A8C;&#x5305;&#x672B;&#x5C3E;&#x7684;&#x5E27;&#x6821;&#x9A8C;&#x5E8F;&#x5217;
+ &#x6570;&#x636E;&#xFF1A;MAC&#x5934;&#x90E8;+IP&#x5934;&#x90E8;+TCP&#x5934;&#x90E8;+&#x6570;&#x636E;</li>
+<li>&#x5F53;FCS&#x6821;&#x9A8C;&#x65E0;&#x9519;&#x8BEF;&#x65F6;&#xFF0C;&#x68C0;&#x67E5;MAC&#x5934;&#x90E8;&#x4E2D;&#x63A5;&#x6536;&#x65B9;MAC&#x5730;&#x5740;
+ &#x6570;&#x636E;&#xFF1A;IP&#x5934;&#x90E8;+TCP&#x5934;&#x90E8;+&#x6570;&#x636E;</li>
+<li>&#x68C0;&#x67E5;&#x65E0;&#x8BEF;&#x540E;&#xFF0C;CPU&#x5F00;&#x59CB;&#x5DE5;&#x4F5C;&#xFF0C;&#x5C06;&#x6570;&#x636E;&#x4ECE;&#x7F51;&#x5361;&#x7F13;&#x51B2;&#x533A;&#x8BFB;&#x5199;&#x5230;TCP/IP&#x6A21;&#x5757;</li>
+<li>IP&#x6A21;&#x5757;&#x68C0;&#x67E5;IP&#x5934;&#x90E8;&#xFF0C;&#x5305;&#x62EC;&#x683C;&#x5F0F;&#x3001;&#x5730;&#x5740;&#x4EE5;&#x53CA;&#x662F;&#x5426;&#x5206;&#x7247;</li>
+<li>&#x68C0;&#x67E5;IP&#x5934;&#x90E8;&#x7684;&#x534F;&#x8BAE;&#x53F7;&#x5B57;&#x6BB5;&#xFF0C;&#x5E76;&#x5C06;&#x5305;&#x8F6C;&#x4EA4;&#x7ED9;&#x76F8;&#x5E94;&#x7684;&#x6A21;&#x5757;
+ &#x6570;&#x636E;&#xFF1A;TCP&#x5934;&#x90E8;+&#x6570;&#x636E;</li>
+<li>TCP&#x6A21;&#x5757;&#x5148;&#x68C0;&#x67E5;&#x5728;&#x8BE5;&#x7AEF;&#x53E3;&#x4E0A;&#x662F;&#x5426;&#x5B58;&#x5728;&#x4E0E;&#x63A5;&#x6536;&#x65B9;&#x7AEF;&#x53E3;&#x53F7;&#x76F8;&#x540C;&#x4E14;&#x6B63;&#x5728;&#x5904;&#x4E8E;&#x7B49;&#x5F85;&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x7684;&#x5957;&#x63A5;&#x5B57;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5219;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;</li>
+<li>TCP&#x6A21;&#x5757;&#x68C0;&#x67E5;TCP&#x5934;&#x90E8;&#x4E2D;&#x7684;&#x63A7;&#x5236;&#x4F4D;SYN&#xFF0C;&#x5F53;&#x5176;&#x4E3A;1&#x65F6;&#xFF0C;&#x8868;&#x793A;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x53D1;&#x8D77;&#x8FDE;&#x63A5;&#x7684;&#x5305;</li>
+<li>TCP&#x6A21;&#x5757;&#x6267;&#x884C;&#x8FDE;&#x63A5;&#x7684;&#x64CD;&#x4F5C;</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../第1节/第1节.html" class="navigation navigation-prev " aria-label="Previous page: 1. 服务器结构">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../第3节/第3节.html" class="navigation navigation-next " aria-label="Next page: 3. 服务器的接收操作">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2. 服务器的连接操作","level":"1.7.2","depth":2,"next":{"title":"3. 服务器的接收操作","level":"1.7.3","depth":2,"path":"第六章/第3节/第3节.md","ref":"第六章/第3节/第3节.md","articles":[]},"previous":{"title":"1. 服务器结构","level":"1.7.1","depth":2,"path":"第六章/第1节/第1节.md","ref":"第六章/第1节/第1节.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-small"],"pluginsConfig":{"expandable-chapters-small":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"第六章/第2节/第2节.md","mtime":"2022-09-06T01:03:45.165Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-06T01:05:46.584Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

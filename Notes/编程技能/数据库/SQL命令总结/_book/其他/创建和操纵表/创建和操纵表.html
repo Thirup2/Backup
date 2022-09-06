@@ -1,0 +1,573 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>一. 创建和操纵表 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../使用视图/使用试图.html" />
+    
+    
+    <link rel="prev" href="../其他.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../SELECT/SELECT.html">
+            
+                <a href="../../SELECT/SELECT.html">
+            
+                    
+                    SELECT
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../SELECT/检索/检索.html">
+            
+                <a href="../../SELECT/检索/检索.html">
+            
+                    
+                    一. 检索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../SELECT/过滤/过滤.html">
+            
+                <a href="../../SELECT/过滤/过滤.html">
+            
+                    
+                    二. 过滤
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../SELECT/创建计算字段/创建计算字段.html">
+            
+                <a href="../../SELECT/创建计算字段/创建计算字段.html">
+            
+                    
+                    三. 创建计算字段
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../SELECT/使用函数处理数据/使用函数处理数据.html">
+            
+                <a href="../../SELECT/使用函数处理数据/使用函数处理数据.html">
+            
+                    
+                    四. 使用函数处理数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../SELECT/汇总数据/汇总数据.html">
+            
+                <a href="../../SELECT/汇总数据/汇总数据.html">
+            
+                    
+                    五. 汇总数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../SELECT/分组数据/分组数据.html">
+            
+                <a href="../../SELECT/分组数据/分组数据.html">
+            
+                    
+                    六. 分组数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../SELECT/子查询/子查询.html">
+            
+                <a href="../../SELECT/子查询/子查询.html">
+            
+                    
+                    七. 子查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../SELECT/联结表/联结表.html">
+            
+                <a href="../../SELECT/联结表/联结表.html">
+            
+                    
+                    八. 联结表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../../SELECT/组合查询/组合查询.html">
+            
+                <a href="../../SELECT/组合查询/组合查询.html">
+            
+                    
+                    九. 组合查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../INSERT/INSERT.html">
+            
+                <a href="../../INSERT/INSERT.html">
+            
+                    
+                    INSERT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../UPDATE/UPDATE.html">
+            
+                <a href="../../UPDATE/UPDATE.html">
+            
+                    
+                    UPDATE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../DELETE/DELETE.html">
+            
+                <a href="../../DELETE/DELETE.html">
+            
+                    
+                    DELETE
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../其他.html">
+            
+                <a href="../其他.html">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.6.1" data-path="创建和操纵表.html">
+            
+                <a href="创建和操纵表.html">
+            
+                    
+                    一. 创建和操纵表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../使用视图/使用试图.html">
+            
+                <a href="../使用视图/使用试图.html">
+            
+                    
+                    二. 使用视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../使用存储过程/使用存储过程.html">
+            
+                <a href="../使用存储过程/使用存储过程.html">
+            
+                    
+                    三. 使用存储过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../管理事务处理/管理事务处理.html">
+            
+                <a href="../管理事务处理/管理事务处理.html">
+            
+                    
+                    四. 管理事务处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../使用游标/使用游标.html">
+            
+                <a href="../使用游标/使用游标.html">
+            
+                    
+                    五. 使用游标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../高级SQL特性/高级SQL特性.html">
+            
+                <a href="../高级SQL特性/高级SQL特性.html">
+            
+                    
+                    六. 高级SQL特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >一. 创建和操纵表</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <ul>
+<li>&#x521B;&#x5EFA;&#x8868;<ul>
+<li>&#x5229;&#x7528;CREATE TABLE&#x521B;&#x5EFA;&#x8868;, &#x5FC5;&#x987B;&#x7ED9;&#x51FA;&#x4E0B;&#x5217;&#x4FE1;&#x606F;:<ul>
+<li>&#x65B0;&#x8868;&#x7684;&#x540D;&#x5B57;, &#x5728;&#x5173;&#x952E;&#x5B57;CREATE TABLE&#x4E4B;&#x540E;&#x7ED9;&#x51FA;;</li>
+<li>&#x8868;&#x5217;&#x7684;&#x540D;&#x5B57;&#x548C;&#x5B9A;&#x4E49;, &#x7528;&#x9017;&#x53F7;&#x9694;&#x5F00;</li>
+<li>&#x6709;&#x7684;DBMS&#x8FD8;&#x8981;&#x6C42;&#x6307;&#x5B9A;&#x8868;&#x7684;&#x4F4D;&#x7F6E;</li>
+</ul>
+</li>
+<li>&#x4F8B;&#x5982;:<pre><code class="lang-sql">  <span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> Products
+  (
+      prod_id        <span class="hljs-built_in">CHAR</span>(<span class="hljs-number">10</span>)            <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+      vend_id        <span class="hljs-built_in">CHAR</span>(<span class="hljs-number">10</span>)            <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+      prod_name      <span class="hljs-built_in">CHAR</span>(<span class="hljs-number">254</span>)           <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+      prod_price     <span class="hljs-built_in">DECIMAL</span>(<span class="hljs-number">8</span>, <span class="hljs-number">2</span>)       <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+      prod_desc      <span class="hljs-built_in">VARCHAR</span>(<span class="hljs-number">1000</span>)       <span class="hljs-literal">NULL</span>
+  );
+</code></pre>
+&#x521B;&#x5EFA;&#x65B0;&#x8868;&#x65F6;, &#x6307;&#x5B9A;&#x7684;&#x8868;&#x540D;&#x5FC5;&#x987B;&#x4E0D;&#x5B58;&#x5728;
+&#x53EA;&#x6709;&#x4E0D;&#x5141;&#x8BB8;NULL&#x503C;&#x7684;&#x5217;&#x53EF;&#x4F5C;&#x4E3A;&#x4E3B;&#x952E;</li>
+</ul>
+</li>
+<li><p>&#x6307;&#x5B9A;&#x9ED8;&#x8BA4;&#x503C;
+  &#x5728;&#x5217;&#x5B9A;&#x4E49;&#x540E;&#x9762;&#x52A0;&#x4E0A;DEFAULT&#x53CA;&#x503C;&#x5373;&#x53EF;, &#x5982;:</p>
+<pre><code class="lang-sql">  ...
+      quantity    INTEGER    NOT NULL    DEFAULT 1,
+  ...
+</code></pre>
+<p>  &#x83B7;&#x5F97;&#x7CFB;&#x7EDF;&#x65E5;&#x671F;
+  |DBMS|&#x51FD;&#x6570;/&#x53D8;&#x91CF;|
+  |:-:|:-:|
+  |DB2|CURRENT_DATE|
+  |MySQL|CURRENT_DATE()|
+  |Oracle|SYSDATE|
+  |PostgreSQL|CURRENT_DATE|
+  |SQL Server|GETDATE()|
+  |SQLite|date(&apos;now&apos;)|</p>
+</li>
+<li><p>&#x66F4;&#x65B0;&#x8868;&#x5B9A;&#x4E49;</p>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;ALTER TABLE &#x8BED;&#x53E5;, &#x4EE5;&#x4E0B;&#x662F;&#x4F7F;&#x7528;ALTER TABLE &#x65F6;&#x9700;&#x8981;&#x8003;&#x8651;&#x7684;&#x4E8B;&#x60C5;:<ul>
+<li>&#x7406;&#x60F3;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4E0D;&#x8981;&#x5728;&#x8868;&#x4E2D;&#x5305;&#x542B;&#x6570;&#x636E;&#x65F6;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x66F4;&#x65B0;&#x3002;&#x5E94;&#x8BE5;&#x5728;&#x8868;&#x7684;&#x8BBE;&#x8BA1;&#x8FC7;&#x7A0B;&#x4E2D;&#x5145;&#x5206;&#x8003;&#x8651;&#x672A;&#x6765;&#x53EF;&#x80FD;&#x7684;&#x9700;&#x6C42;&#xFF0C;&#x907F;&#x514D;&#x4ECA;&#x540E;&#x5BF9;&#x8868;&#x7684;&#x7ED3;&#x6784;&#x505A;&#x5927;&#x6539;&#x52A8;</li>
+<li>&#x6240;&#x6709;&#x7684;DBMS&#x90FD;&#x5141;&#x8BB8;&#x7ED9;&#x73B0;&#x6709;&#x7684;&#x8868;&#x589E;&#x52A0;&#x5217;&#xFF0C;&#x4E0D;&#x8FC7;&#x5BF9;&#x6240;&#x589E;&#x52A0;&#x5217;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF08;&#x4EE5;&#x53CA;NULL&#x548C;DEFAULT&#x7684;&#x4F7F;&#x7528;&#xFF09;&#x6709;&#x6240;&#x9650;&#x5236;&#x3002;</li>
+<li>&#x8BB8;&#x591A;DBMS&#x4E0D;&#x5141;&#x8BB8;&#x5220;&#x9664;&#x6216;&#x66F4;&#x6539;&#x8868;&#x4E2D;&#x7684;&#x5217;</li>
+<li>&#x591A;&#x6570;DBMS&#x5141;&#x8BB8;&#x91CD;&#x65B0;&#x547D;&#x540D;&#x8868;&#x4E2D;&#x7684;&#x5217;</li>
+<li>&#x8BB8;&#x591A;DBMS&#x9650;&#x5236;&#x5BF9;&#x5DF2;&#x7ECF;&#x586B;&#x6709;&#x6570;&#x636E;&#x7684;&#x5217;&#x8FDB;&#x884C;&#x66F4;&#x6539;&#xFF0C;&#x5BF9;&#x672A;&#x586B;&#x6709;&#x6570;&#x636E;&#x7684;&#x5217;&#x51E0;&#x4E4E;&#x6CA1;&#x6709;&#x9650;&#x5236;</li>
+</ul>
+</li>
+<li>&#x4F7F;&#x7528;ALTER TABLE&#x5FC5;&#x987B;&#x7ED9;&#x51FA;&#x4E0B;&#x9762;&#x7684;&#x4FE1;&#x606F;<ul>
+<li>&#x5728;ALTER TABLE&#x4E4B;&#x540E;&#x7ED9;&#x51FA;&#x8981;&#x66F4;&#x6539;&#x7684;&#x8868;&#x540D;&#xFF08;&#x8BE5;&#x8868;&#x5FC5;&#x987B;&#x5B58;&#x5728;&#xFF0C;&#x5426;&#x5219;&#x5C06;&#x51FA;&#x9519;&#xFF09;</li>
+<li>&#x5217;&#x51FA;&#x8981;&#x505A;&#x54EA;&#x4E9B;&#x66F4;&#x6539;</li>
+</ul>
+</li>
+<li>&#x4F8B;&#x5982;&#xFF1A;<pre><code class="lang-sql">  <span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> Vendors
+  <span class="hljs-keyword">ADD</span> vend_phone <span class="hljs-built_in">CHAR</span>(<span class="hljs-number">20</span>);
+</code></pre>
+</li>
+</ul>
+</li>
+<li>&#x5220;&#x9664;&#x6574;&#x4E2A;&#x8868;<pre><code class="lang-sql">  <span class="hljs-keyword">DROP</span> <span class="hljs-keyword">TABLE</span> CustCopy;
+</code></pre>
+</li>
+<li>&#x91CD;&#x547D;&#x540D;&#x8868;
+  RENAME&#x8BED;&#x53E5;</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../其他.html" class="navigation navigation-prev " aria-label="Previous page: 其他">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../使用视图/使用试图.html" class="navigation navigation-next " aria-label="Next page: 二. 使用视图">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"一. 创建和操纵表","level":"1.6.1","depth":2,"next":{"title":"二. 使用视图","level":"1.6.2","depth":2,"path":"其他/使用视图/使用试图.md","ref":"其他/使用视图/使用试图.md","articles":[]},"previous":{"title":"其他","level":"1.6","depth":1,"path":"其他/其他.md","ref":"其他/其他.md","articles":[{"title":"一. 创建和操纵表","level":"1.6.1","depth":2,"path":"其他/创建和操纵表/创建和操纵表.md","ref":"其他/创建和操纵表/创建和操纵表.md","articles":[]},{"title":"二. 使用视图","level":"1.6.2","depth":2,"path":"其他/使用视图/使用试图.md","ref":"其他/使用视图/使用试图.md","articles":[]},{"title":"三. 使用存储过程","level":"1.6.3","depth":2,"path":"其他/使用存储过程/使用存储过程.md","ref":"其他/使用存储过程/使用存储过程.md","articles":[]},{"title":"四. 管理事务处理","level":"1.6.4","depth":2,"path":"其他/管理事务处理/管理事务处理.md","ref":"其他/管理事务处理/管理事务处理.md","articles":[]},{"title":"五. 使用游标","level":"1.6.5","depth":2,"path":"其他/使用游标/使用游标.md","ref":"其他/使用游标/使用游标.md","articles":[]},{"title":"六. 高级SQL特性","level":"1.6.6","depth":2,"path":"其他/高级SQL特性/高级SQL特性.md","ref":"其他/高级SQL特性/高级SQL特性.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters-small"],"pluginsConfig":{"expandable-chapters-small":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"其他/创建和操纵表/创建和操纵表.md","mtime":"2022-09-06T01:25:21.456Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-06T01:28:33.394Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
