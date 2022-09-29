@@ -400,3 +400,248 @@ HTML文档中有些字符具有特殊含义，如最明显的`<`和`>`字符。
 
 
 ## 4. `contenteditable`属性
+
+`contenteditable`属性是HTML5中新增加的属性，其用途是让用户能够修改页面上的内容。
+
+```html
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Example</title>
+    </head>
+    <body>
+        <p contenteditable="true">
+            It is raining right now.
+        </p>
+    </body>
+</html>
+```
+
+此例把`contenteditable`属性用在一个`p`元素身上。该属性设置为`true`时用户可以编辑元素内容，设置为`false`时则禁止编辑，如果未设定其值，那么元素会从父元素处继承该属性的值。
+
+
+
+## 5. `contextmenu`属性
+
+`contextmenu`属性用来为元素设定快捷菜单。这种菜单会在受到触发的时候弹出来（Windows是鼠标右击）。
+
+
+
+## 6. `dir`属性
+
+`dir`属性用来规定元素中文字的方向。其有效值有两个：**ltr**（用于从左到右的文字）和**rtl**（用于从右到左的文字）
+
+```html
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Example</title>
+    </head>
+    <body>
+        <p dir="rtl">
+            This is right-to-left
+        </p>
+        <p dir="ltr">
+            This is left-to-right
+        </p>
+    </body>
+</html>
+```
+
+
+
+## 7. `draggable`属性
+
+`draggable`属性是HTML5支持拖放操作的方式之一，用来表示元素是否可被拖放。
+
+
+
+## 8. `dropzone`属性
+
+`dropzone`属性是HTML5支持拖放操作的方式之一，与上述`draggable`属性搭配使用。
+
+
+
+## 9. `hidden`属性
+
+`hidden`属性是个布尔属性，表示相关元素当前毋需关注。浏览器将隐藏相关元素。
+
+```html
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Example</title>
+        <script>
+            var toggleHidden = function() {
+                var elem = document.getElementById("toggle");
+                if (elem.hasAttribute("hidden")) {
+                    elem.removeAttribute("hidden");
+                } else {
+                    elem.setAttribute("hidden", "hidden");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="toggleHidden()">
+            Toggle
+        </button>
+        <table>
+            <tr><th>Name</th><th>City</th></tr>
+            <tr><td>Adam Freeman</td><td>London</td></tr>
+            <tr id="toggle" hidden><td>Joe Smith</td><td>New York</td></tr>
+            <tr><td>Anne Jones</td><td>Paris</td></tr>
+        </table>
+    </body>
+</html>
+```
+
+
+
+## 10. `id`属性
+
+`id`属性用来给元素分配一个唯一的标识符。这种标识符通常用来将样式应用到元素上或在JavaScript程序中用来选择元素。
+
+```html
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Example</title>
+    </head>
+    <style>
+        #w3clink {
+            background:grey;
+            color:white;
+            padding:5px;
+            border:thin solid black;
+        }
+    </style>
+    <body>
+        <a href="http://apress.com">Apress web site</a>
+        <p/>
+        <a id="w3clink" href="http://w3c.org">W3C web site</a>
+    </body>
+</html>
+```
+
+为了根据`id`属性值应用样式，需要在定义样式时使用一个以`#`号开头后接`id`属性值得选择器。
+
+`id`属性还可以用来导航到文档中的特定位置。倘若有个名为`example.html`的文档中包含一个`id`属性值为`myelement`的元素，那么使用`example.html#myelement`这个URL即可直接导航至该元素。
+
+
+
+## 11. `lang`属性
+
+`lang`属性用于说明元素内容使用的语言。
+
+```html
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Example</title>
+    </head>
+    <body>
+        <p lang="en">
+            Hello - how are you?
+        </p>
+        <p lang="zh-CN">
+            你好，近来如何？
+        </p>
+    </body>
+</html>
+```
+
+`lang`属性值必须使用有效的ISO语言代码。
+
+使用`lang`属性的目的是让浏览器调整其表达元素内容的方式。
+
+`lang`属性还可以用来选择指定语言的内容，以便只显示用户所选语言的内容或对其应用样式。
+
+
+
+## 12. `spellcheck`属性
+
+`spellcheck`属性用来表明浏览器是否应该对元素的内容进行拼写检查。这个属性只有用在用户可以编辑的元素上时才有意义。
+
+```html
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Example</title>
+    </head>
+    <body>
+        <textarea spellcheck="true">This is some mispelled text</textarea>
+    </body>
+</html>
+```
+
+`spellcheck`属性可以接受的值有两个：`true`和`false`。至于拼写检查的实现方式则因浏览器而异。
+
+
+
+## 13. `style`属性
+
+`style`属性用来直接在元素身上定义CSS样式。
+
+```html
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Example</title>
+    </head>
+    <body>
+        <a href="http://apress.com" style="background: grey; color: white; padding: 10px">
+            Visit the Apress site
+        </a>
+    </body>
+</html>
+```
+
+
+
+## 14. `tabindex`属性
+
+HTML页面上的键盘焦点可以通过按`Tab`键在各元素之间切换。
+
+使用`tabindex`属性可以改变默认的转移顺序。
+
+```html
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Example</title>
+    </head>
+    <body>
+        <form>
+            <label>Name: <input type="text" name="name" tabindex="1" /></label>
+            <p/>
+            <label>City: <input type="text" name="city" tabindex="-1" /></label>
+            <p/>
+            <label>Country: <input type="text" name="country" tabindex="2" /></label>
+            <p/>
+            <input type="submit" tabindex="3" />
+        </form>
+    </body>
+</html>
+```
+
+`tabindex`属性的值为1的元素会第一个被选中。然后是值为2的元素，以此类推。值为-1的元素不会被选中。
+
+
+
+## 15. `title`属性
+
+`title`属性提供了元素的额外信息。
+
+```html
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Example</title>
+    </head>
+    <body>
+        <a title="Apress Publishing" href="http://apress.com">Visit the Apress site</a>
+    </body>
+</html>
+```
+
