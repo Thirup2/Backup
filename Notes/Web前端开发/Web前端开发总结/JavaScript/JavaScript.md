@@ -284,14 +284,14 @@ Hello Adam. Today is sunny.
 
 ## 4. 使用对象
 
-- **读取和修改属性值**
+### 1) 读取和修改属性值
 
 读取和修改属性值则涉及到访问属性，JavaScript中访问一个对象的属性有两种方法：
 
 1. 点操作符：`对象.属性`，如`myData.name`
 2. 中括号：`对象["属性"]`，如`myData["weather"]`
 
-- **枚举对象属性**
+### 2) 枚举对象属性
 
 通过`for...in`语句可以枚举对象的属性。
 
@@ -330,7 +330,7 @@ Hello Adam. Today is sunny.
    Name: printMessages Value: function() { document.writeln("Hello " + this.name + ". "); document.writeln("Today is " + this.weather + "."); }
    ```
 
-- **增删属性和方法**
+### 3) 增删属性和方法
 
 就算使用对象字面量生成的对象，也可以为其定义新属性或方法或者删除已有的属性或方法。
 
@@ -461,7 +461,7 @@ Test 3: false Test 4: true
 
 如果想要让JavaScript将字符视为数字，就需要用到显式类型转换，当然，还有其他的一些需要转换的形式：
 
-- **将数值转换为字符串**
+### 1) 将数值转换为字符串
 
 将数值转换为字符串有两种方法：
 
@@ -479,7 +479,7 @@ Test 3: false Test 4: true
 | toExponential(n) | 以指数表示法表示数值。尾数的小数点前后分别有1位数字和n位数字 | 字符串 |
 | toPrecision(n)   | 用n位有效数字表示数值，在必要的情况下使用指数表示法          | 字符串 |
 
-- **将字符串转换为数值**
+### 2) 将字符串转换为数值
 
 1. 使用`Number`函数：`Number(str)`，将参数的字符串转换为数值，但要求参数的字符串不能包含其他字符
 2. 使用`parseInt`函数：`parseInt(str)`，将参数的字符串转换为整数值，参数字符串可以包含其他字符，函数对其进行忽略。
