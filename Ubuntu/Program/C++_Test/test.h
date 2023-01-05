@@ -41,32 +41,3 @@ using std::ends;            // 输出该符号前的内容和一个空字符，�
 using std::flush;           // 输出该符号前的内容，然后刷新缓冲区
 using std::unitbuf;         // 将刷新模式设置为unitbuf，即每一次输出操作后立即执行flush操作
 using std::nounitbuf;       // 将刷新模式恢复为默认设置
-
-// 顺序容器
-// vector
-#include <vector>       // vector类头文件
-using std::vector;      // vector类型说明符
-using std::swap;        // swap函数
-// deque
-#include <deque>
-using std::deque;
-using std::swap;
-// list
-#include <list>
-using std::list;
-using std::swap;
-// forward_list
-#include <forward_list>
-using std::forward_list;
-using std::swap;
-// array
-#include <array>
-using std::array;
-// string
-#include <string>       // string类头文件
-using std::string;      // string类型声明符，字符为char类型
-#include <cctype>       // char类型字符处理函数
-using std::wstring;     // wstring类型，字符为wchar_t类型
-#include <cwctype>      // wchar_t类型字符处理函数
-using std::u16string;   // u16string类型，字符为char16_t类型
-using std::u32string;   // u32string类型，字符为char32_t类型

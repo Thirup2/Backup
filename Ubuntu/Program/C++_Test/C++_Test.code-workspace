@@ -9,7 +9,9 @@
 			"cstddef": "cpp",
 			"vector": "cpp",
 			"cstring": "cpp",
-			"cctype": "cpp"
+			"cctype": "cpp",
+			"array": "cpp",
+			"string": "cpp"
 		}
 	}
 }
